@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 
     char method;
     // Handle invalid choice input with correct error message
-    std::cout << "Choice of search method ([l]inear, [b]inary)? ";
+    std::cout << "Choice of search method ([l]inear, [b]inary)?\n";
     while (true)
     {
 
@@ -186,7 +186,7 @@ int main(int argc, char *argv[])
       {
         break;
       }
-      std::cout << "Incorrect choice" << std::endl;
+      std::cerr<< "Incorrect choice" << std::endl;
     }
 
     if (method == 'b')
