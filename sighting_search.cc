@@ -84,7 +84,7 @@ std::vector<int> Read_int_from_File(const std::string &filename)
 }
 
 /* Function to read sightings from a file and store them as Sighting objects */
-std::vector<Sighting> ReadSightingsFromFile(const std::string &filename)
+std::vector<Sighting> Read_sightings(const std::string &filename)
 {
   std::ifstream file(filename);
   if (!file.is_open())
@@ -115,7 +115,7 @@ int L_Search(const std::vector<Sighting> &sightings, const std::vector<int> &sig
       }
     }
   }
-  return ctr; // Return the total match count
+  return ctr; 
 }
 
 int B_Search(const std::vector<Sighting> &sightings, const std::vector<int> &signatures)
@@ -125,7 +125,7 @@ int B_Search(const std::vector<Sighting> &sightings, const std::vector<int> &sig
   {
     int left = 0;
     int right = sightings.size() - 1;
-    bool found = false; // Flag to track if a match is found
+    bool found = false; 
 
     while (left <= right)
     {
@@ -165,7 +165,7 @@ int main(int argc, char *argv[])
 
   try
   {
-    std::vector<Sighting> sightings = ReadSightingsFromFile(argv[1]);
+    std::vector<Sighting> sightings = Read_sightings(argv[1]);
     std::vector<int> signatures = Read_int_from_File(argv[2]);
 
     char method;
@@ -186,7 +186,7 @@ int main(int argc, char *argv[])
     }
     // Create a Timer object to measure execution time
     Timer timer;
-    timer.Reset(); // Start the timer
+    timer.Reset(); // Reset timer
     int ctr;
     if (method == 'l')
     {
