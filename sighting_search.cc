@@ -104,19 +104,22 @@ std::vector<Sighting> Read_sightings(const std::string &filename)
 int L_Search(const std::vector<Sighting> &sightings, const std::vector<int> &signatures)
 {
   int ctr = 0;
-  for (const auto &sig : signatures)
+  for (size_t i = 0; i < signatures.size(); i++)
   {
-    for (const auto &s : sightings)
+    int signature = signatures[i];
+    for (size_t j = 0; j < sightings.size(); j++)
     {
-      if (s.Signature() == sig)
+      const Sighting &sighting = sightings[j];
+      if (sighting.Signature() == signature)
       {
         ctr++;
         break;
       }
     }
   }
-  return ctr; 
+  return ctr;
 }
+
 
 int B_Search(const std::vector<Sighting> &sightings, const std::vector<int> &signatures)
 {
