@@ -1,4 +1,5 @@
 🌌 Project Overview
+
 SkyScan is a command-line C++ application designed to help analyze night sky observations and distinguish conventional aircraft from potential unidentified aerial phenomena.
 
 Given a file of sighting reports (with apparent speed and brightness data) and a file of known aircraft signature values, the program identifies how many of those sightings match known aircraft.
