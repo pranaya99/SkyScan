@@ -5,3 +5,15 @@ SkyScan is a command-line C++ application designed to help analyze night sky obs
 Given a file of sighting reports (with apparent speed and brightness data) and a file of known aircraft signature values, the program identifies how many of those sightings match known aircraft.
 
 Users can choose between a linear search (for smaller datasets or fewer checks) or a binary search (after sorting the data) for efficiency. The program reports how long the operation took in microseconds and outputs the total number of matches to a results file.
+
+🚀 Features
+
+C++11 compliant implementation
+
+High-resolution timing via <chrono>
+
+Google-style C++ code formatting
+
+Modular, object-oriented design
+
+Dataset generation support
